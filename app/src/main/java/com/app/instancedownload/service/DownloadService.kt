@@ -26,6 +26,8 @@ import io.github.lizhangqu.coreprogress.ProgressHelper
 import io.github.lizhangqu.coreprogress.ProgressUIListener
 import okhttp3.*
 import okio.Okio
+import okio.buffer
+import okio.sink
 import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat
@@ -213,7 +215,7 @@ class DownloadService : Service() {
                     try {
                         val source = responseBody.source()
                         val outFile = File("$iconsStoragePath/$string")
-                        val sink = Okio.buffer(Okio.sink(outFile))
+                        val sink = outFile.sink().buffer()
                         source.readAll(sink)
                         sink.flush()
                         source.close()

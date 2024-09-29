@@ -30,7 +30,7 @@ class InformationActivity : AppCompatActivity() {
         super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
 
-    @androidx.annotation.OptIn(BuildCompat.PrereleaseSdkCheck::class)
+//    @androidx.annotation.OptIn(BuildCompat.PrereleaseSdkCheck::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_information)

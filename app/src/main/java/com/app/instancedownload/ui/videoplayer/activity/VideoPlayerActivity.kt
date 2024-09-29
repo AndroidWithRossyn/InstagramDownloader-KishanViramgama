@@ -36,7 +36,7 @@ class VideoPlayerActivity : AppCompatActivity() {
 
     private lateinit var player: ExoPlayer
 
-    @androidx.annotation.OptIn(BuildCompat.PrereleaseSdkCheck::class)
+//    @androidx.annotation.OptIn(BuildCompat.PrereleaseSdkCheck::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
